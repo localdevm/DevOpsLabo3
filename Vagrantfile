@@ -47,6 +47,7 @@ end
           node.vm.network :private_network, ip: "192.168.16.2#{i}"
           node.vm.network "forwarded_port", guest: 80, host: "808#{i}"
           node.vm.provision "shell", path: "bootstrap.sh"
+          node.vm.provision "shell", path: "web.sh"
           config.ssh.insert_key = false
       end
     end
