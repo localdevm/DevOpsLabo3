@@ -1,0 +1,4 @@
+- hosts: dtb
+  become: true
+  roles:
+   - dtb

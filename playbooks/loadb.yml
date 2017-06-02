@@ -1,0 +1,4 @@
+- hosts: loadb
+  become: true
+  roles:
+   - loadb

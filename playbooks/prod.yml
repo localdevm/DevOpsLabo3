@@ -1,0 +1,4 @@
+- hosts: prod
+  become: true
+  roles:
+   - prod

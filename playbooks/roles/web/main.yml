@@ -1,0 +1,17 @@
+---
+  - name: Install git
+    apt: name={{ item }} state=present
+    with_items:
+      - git
+
+  - name: Install nodejs
+    apt: name={{ item }} state=present
+    with_items:
+      - nodejs
+
+  - name: Pull repo
+    git:
+      repo: 'https://github.com/themaawaa/Dev-L1L2.git'
+
+  - name: Run app
+    shell: node server.js
